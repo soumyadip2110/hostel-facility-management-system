@@ -1,0 +1,80 @@
+.student-module {
+    width: 800px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .student-module form {
+    padding: 30px;
+    background: transparent;
+    /* background: #fff; */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  }
+  
+  .student-module h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .student-module h3 {
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .input-box-1,
+  .input-box-2 {
+    margin-bottom: 30px;
+    /* border: 4px solid black; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+  }
+  
+  .input-box-1 input,
+  .input-box-2 input,
+  #description {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  #description {
+    height: 120px;
+    margin-bottom: 30px;
+    /* border: 4px solid black; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+  
+  select {
+    /* border: 4px solid black; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #555;
+  }
+  
+  .btn-1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .btn-1:hover {
+    background-color: #45a049;
+  }
+  
