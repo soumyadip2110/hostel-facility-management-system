@@ -74,10 +74,7 @@ function attendance(callback) {
             console.log(err);
         }
         else {
-            // console.log(results);
             if (results.length === 0) {
-                // let allRegNo;
-                // let attnId;
                 pool.query('select regNo from stdmaster', (err, regNoResult) => {
                     if (err) {
                         console.log("error triggered at line 89");
@@ -115,8 +112,6 @@ function attendance(callback) {
 
             }
             else{
-                // pool.query('select name, regNo, roomNo, pNo, date, status from stdmaster inner join stdattendance using (regNo) where stdattendance.date = ?', [date], 
-                // (err, results) => {
                 pool.query('select name, regNo, roomNo, pNo, DATE_FORMAT(date, "%d-%m-%Y") as date, status from stdmaster inner join stdattendance using (regNo) where stdattendance.date = ?', [date], 
                 (err, results) => {
                     if (err){
@@ -130,16 +125,6 @@ function attendance(callback) {
             }
         }
     });
-    // pool.query('select name, regNo, roomNo, pNo, status from stdmaster inner join stdattendance using (regNo) where stdattendance.date = ?', [date], 
-    // (err, results) => {
-    //     if (err){
-    //         console.log("error triggered at line 25");
-    //         console.log(err);
-    //         callback(err, null);
-    //     } else{
-    //         callback(null, results);
-    //     }
-    // })
 }
 
 function updateAttendance(status, regNo, callback) {
@@ -222,7 +207,6 @@ function searchAttendanceRecordDate(search, callback){
 
 // Student Details
 function stdDetails(callback) {
-    // pool.query('select name, regNo, roomNo, pNo from stdmaster', 
     pool.query('select * from stdmaster', (err, results) => {
         if (err) {
             console.log("error triggered at line 37");
@@ -302,34 +286,10 @@ function studentEntry(name, regNo, pNo, roomNo, parentNo, address, callback) {
                 callback(null, results);
             }
         })
-    // pool.query('select * from roomstatus where roomNo = ?', [roomNo], (err, result) => {
-    //     if (err){
-    //         console.log("error triggered at line 137", err);
-    //     } else{
-    //         if (result.length > 0){
-    //             if (result.status != 'occupied'){
-    //                 pool.query('insert into stdmaster values (?, ?, ?, ?, ?, NULL, NULL, ?)',
-    //                 [regNo, name, pNo, parentNo, address, roomNo], (err, results) => {
-    //                     if (err){
-    //                         console.log("error triggered at line 152", err);
-    //                         callback(err, null);
-    //                     } else{
-    //                         callback(null, results);
-    //                     }
-    //                 })
-    //             }  else {
-    //                 callback('error', null)
-    //             }
-    //         } else {
-    //             callback('error', null)
-    //         }
-    //     }
-    // })
 }
 
 // Room Status
 function getRoomsStatus(callback) {
-    // pool.query('select name, regNo, roomNo, pNo from stdmaster', 
     pool.query('select * from roomstatus', (err, results) => {
         if (err) {
             console.log("error triggered at line 172");
@@ -340,82 +300,4 @@ function getRoomsStatus(callback) {
     })
 }
 
-// function login(password, callback){
-//     pool.query('select name, regNo, roomNo, pNo, status from stdmaster inner join stdattendance using (regNo) where stdmaster.name = ? or stdmaster.regNo = ? or stdmaster.roomNo = ?', [search, search, search], 
-//     (err, results) => {
-//         if (err){
-//             console.log("error triggered at line 116");
-//             callback(err, null);
-//         } else{
-//             callback(null, results);
-//         }
-//     })
-// }
-
-// function temp2(){
-//     let end = false;
-//     for (let i = 1; i < 10; i++){
-//         if (end){
-//             break;
-//         }
-//         else {
-//             let status = i % 3 == 0 ? 'occupied' : 'semi-vacant'
-//             let roomNo = 'b-10' + i
-//             pool.query(`insert into roomstatus values ('${roomNo}', 'b', '${status}')`, (err, results) => {
-//                 if (err){
-//                     console.log(err);
-//                     console.log("error triggered at line 108");
-//                     end = true;
-//                 } else{
-//                     console.log('success1');
-//                 }
-//             })
-//         }
-//     }
-// }
-// function temp(){
-//     let end = false;
-//     for (let i = 1; i < 10; i++){
-//         let regNo = 105 + i;
-//         let name = 'name ' + i
-//         let roomNo = 'b-10' + i
-//         if (end){
-//             break;
-//         }
-//         else {
-//             pool.query(`insert into stdmaster values (${regNo}, '${name}', '9876543210', '0987654321', 'west bengal', NULL, NULL, '${roomNo}')`, (err, results) => {
-//                 if (err){
-//                     console.log(err);
-//                     end = true;
-//                     console.log("error triggered at line 123");
-//                 } else{
-//                     console.log('success2');
-//                 }
-//             })
-//         }
-//     }
-// }
-// function temp3(){
-//     let end = false;
-//     for (let i = 1; i < 10; i++){
-//         let id = 5 + i
-//         let regNo = 105 + i;
-//         if (end){
-//             break;
-//         }
-//         else {
-//             pool.query(`insert into stdattendance values (${id}, ${regNo}, 'Absent')`, (err, results) => {
-//                 if (err){
-//                     console.log(err);
-//                     end = true;
-//                     console.log("error triggered at line 123");
-//                     console.log('success3');
-//                 } else{
-//                 }
-//             })
-//         }
-//     }
-// }
-
 export { searchStudentDetails, searchAttendanceRecordDate, searchAttendanceRecord, attendanceRecord, studentModule, getRoomsStatus, renovationStatus, attendance, stdDetails, delRenoRow, getRenoLogs, updateAttendance, filterLogs, markAll, searchStudent, login, studentEntry };
-// export {temp, temp2, temp3, renovationStatus, attendance, stdDetails, delRenoRow, getRenoLogs, updateAttendance, filterLogs};

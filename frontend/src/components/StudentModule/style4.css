@@ -7,7 +7,6 @@
   .student-module form {
     padding: 30px;
     background: transparent;
-    /* background: #fff; */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 1);
   }
@@ -25,7 +24,6 @@
   .input-box-1,
   .input-box-2 {
     margin-bottom: 30px;
-    /* border: 4px solid black; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     border-radius: 8px;
   }
@@ -44,17 +42,14 @@
   #description {
     height: 120px;
     margin-bottom: 30px;
-    /* border: 4px solid black; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
   
   select {
-    /* border: 4px solid black; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     width: 100%;
     margin-bottom: 30px;
     padding: 15px;
-    /* border: 1px solid #ddd; */
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;

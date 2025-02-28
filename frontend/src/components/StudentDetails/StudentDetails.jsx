@@ -22,23 +22,7 @@ function StudentDetails(){
             console.error('There was a problem with the fetch operation:', error);
         });
     }
-    
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/search-student-details', {
-    //         method: 'GET',
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //           'Accepts': 'application/json'
-    //         }
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         setStudentDetailsData(data);
-    //     })
-    //     .catch(error => {
-    //         console.error('There was a problem with the fetch operation:', error);
-    //     });
-    // }, []);
+
     useEffect(() => {
         fetchData();
     }, [setStudentDetailsData])
@@ -99,8 +83,6 @@ function StudentDetails(){
                         roomNo = {student.roomNo}
                         parentNo = {student.parentNo}
                         address = {student.address}
-                        // tg_name = {student.tg_name}
-                        // tg_pNo = {student.tg_pNo}
                     />
                 )
             })}

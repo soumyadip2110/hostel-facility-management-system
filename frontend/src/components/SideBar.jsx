@@ -24,12 +24,6 @@ function SideBar(){
                     <Link to='/admin/new-student' className="link">New Student Entry</Link>
                 </li>
             </ul>
-            {/* <div className="option renovation-option">
-                <Link to='/'>Renovation</Link>
-            </div>
-            <div className="option attendance-option">
-                <Link to='/attendance'>Attendance</Link>
-            </div> */}
         </div>
     );
 }

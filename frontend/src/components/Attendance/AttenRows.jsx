@@ -1,6 +1,5 @@
 function AttenRows(props) {
     const status = props.status;
-    // const colour = status === 'Present' ? 'green' : 'red';
     let colour;
     if (status === 'Present'){
         colour = 'green';

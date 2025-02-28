@@ -1,6 +1,5 @@
 import express from "express";
 import { searchStudentDetails, searchAttendanceRecordDate, searchAttendanceRecord, attendanceRecord, studentModule, attendance, renovationStatus, stdDetails, delRenoRow, getRenoLogs, updateAttendance, filterLogs, markAll, searchStudent, login, studentEntry, getRoomsStatus } from "./database.js";
-// import { temp, temp2, temp3, attendance, renovationStatus, stdDetails, delRenoRow, getRenoLogs, updateAttendance, filterLogs } from "./database.js";
 import cors from 'cors';
 import bodyParser from "body-parser";
 
@@ -11,14 +10,6 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
-// app.get('/', (req, res) => {
-//     res.send({'msg': 'hello world'});
-// })
-
-// temp3();
-// temp2();
-// temp();
-
 // Renovation Status
 app.get('/renovation-status', (req, res) => {
     renovationStatus((err, result) => {
@@ -26,7 +17,6 @@ app.get('/renovation-status', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -38,7 +28,6 @@ app.get('/reno-logs', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -51,7 +40,6 @@ app.post('/delete-reno-row', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             console.log('Renovation row deleted successfully')
             res.send({message: 'Renovation row deleted successfully'});
         }
@@ -77,7 +65,6 @@ app.get('/attendance', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -91,7 +78,6 @@ app.post('/update-attendance', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             console.log('Attendance updated successfully')
             res.send({message: 'Attendance updated successfully'});
         }
@@ -116,7 +102,6 @@ app.post('/search-student', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -129,7 +114,6 @@ app.get('/attendance-record', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -141,7 +125,6 @@ app.post('/search-student-record', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -153,7 +136,6 @@ app.post('/search-student-record-date', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -166,7 +148,6 @@ app.get('/student-details', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -178,7 +159,6 @@ app.post('/search-student-details', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -192,7 +172,6 @@ app.post('/login', (req, res) => {
             console.log("Error at line 142");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })
@@ -200,14 +179,12 @@ app.post('/login', (req, res) => {
 
 // Student Module
 app.post('/student-module', (req, res) => {
-    // const [name, regNo, pNo, roomNo, parentNo, address] = req.body;
     studentModule(req.body.roomNo, req.body.type, req.body.pNo, req.body.description, (err, result) => {
         if (err) {
             console.log("Error");
             res.send({message: 'Invalid input'});
         }
         else {
-            // console.log(result)
             res.send({message: 'Complaint/Renovation request submitted successfully'});
         }
     })
@@ -215,14 +192,12 @@ app.post('/student-module', (req, res) => {
 
 // New Student Entry
 app.post('/student-entry', (req, res) => {
-    // const [name, regNo, pNo, roomNo, parentNo, address] = req.body;
     studentEntry(req.body.name, req.body.regNo, req.body.pNo, req.body.roomNo, req.body.parentNo, req.body.address, (err, result) => {
         if (err) {
             console.log("Error");
             res.send({message: 'Invalid input'});
         }
         else {
-            // console.log(result)
             res.send({message: 'New entry done successfully'});
         }
     })
@@ -235,7 +210,6 @@ app.get('/room-status', (req, res) => {
             console.log("Error");
         }
         else {
-            // console.log(result)
             res.send(result);
         }
     })

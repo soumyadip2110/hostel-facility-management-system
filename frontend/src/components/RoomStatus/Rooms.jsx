@@ -13,10 +13,6 @@ function Rooms(props){
             <p>{props.floorNo}</p>
             <p>{props.status}</p>
             <div className="status-box" style={{backgroundColor: `${color}`}}></div>
-            {/* <p>Room No.: {props.roomNo}</p>
-            <p>Floor No.: {props.floorNo}</p>
-            <p>Status: {props.status}</p>
-            <div className="status-box" style={{backgroundColor: `${color}`}}></div> */}
         </div>
     );
 }

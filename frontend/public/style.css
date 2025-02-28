@@ -15,7 +15,6 @@
 .side-bar{
     background-color: rgb(166, 213, 255);
     padding: 15px;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +26,6 @@
     height: 100%;
     list-style: none;
     font-size: 20px;
-    /* background-color: yellowgreen; */
 }
 
 .side-bar li{
@@ -36,23 +34,15 @@
 }
 
 .link {
-    /* background-color: blue; */
     text-decoration: none;
     color: black;
 }
 
 /* Renovation and Attendance Containers */
 .renovation-container, .attendance-container, .student-details-container{
-    /* border: 2px solid black; */
     margin: 5px;
     padding: 10px;
     font-size: 18px;
-    /* background-color: rgb(202, 230, 255); */
-    /* background-color: rgb(216, 237, 255); */
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: 10px; */
     overflow: hidden;
     overflow-y: scroll;
     backdrop-filter: blur(9px);
@@ -60,9 +50,7 @@
 }
 
 .renovation-headers{
-    /* border: 2px solid black; */
     background-color: rgb(232, 232, 232);
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
@@ -92,7 +80,6 @@
     background-color: rgb(232, 232, 232);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-template-columns: repeat(8, 1fr); */
     grid-template-rows: 1fr;
     gap: 10px;
     margin: 10px;
@@ -102,14 +89,11 @@
 
 /* renovation header items */
 .reno-header, .atten-header, .std-details-header{
-    /* border: 2px solid black; */
-    /* background-color: blue; */
     margin: 10px;
     font-weight: bold;
 }
 
 .renovation-item-5{
-    /* background: url(../src/img/bin.png) no-repeat; */
     height: 24px;
     width: 60px;
     padding: 2px;
@@ -125,9 +109,6 @@
 }
 
 .renovation-rows{
-    /* border: 2px solid black; */
-    /* background-color: aliceblue; */
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
@@ -151,7 +132,6 @@
 .student-details-rows{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-template-columns: repeat(8, 1fr); */
     grid-template-rows: 1fr;
     gap: 10px;
     margin: 10px;
@@ -159,8 +139,6 @@
 
 /* renovation items */
 .reno-item, .atten-item, .std-details-item{
-    /* border: 2px solid black; */
-    /* background-color: blueviolet; */
     margin: 10px;
 }
 
@@ -179,12 +157,10 @@
 }
 
 .reno-logs-container{
-    /* background-color: rgb(227, 242, 255); */
     background-color: rgb(166, 213, 255);
     padding: 20px;
     margin-top: 5px;
     display: none;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -193,14 +169,12 @@
 }
 
 .reno-logs-container td{
-    /* background-color: red; */
     padding: 5px 30px;
     
     font-weight: normal;
 }
 
 .log-filter-box{
-    /* background-color: red; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -217,9 +191,6 @@
     background-color: lightgrey;
     cursor: pointer;
 }
-/* .logs-table{
-    display: none;
-} */
 
 .attendance-item-5{
     display: flex;
@@ -311,7 +282,6 @@
     margin: 15px;
     padding: 15px;
     width: 200px;
-    /* height: 70px; */
     background-color: black;
     color: white;
     border-radius: 20px;

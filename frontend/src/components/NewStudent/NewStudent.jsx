@@ -35,36 +35,6 @@ function NewStudent(){
     }
     
     return (
-        // <div className="new-student-container">
-        //     <h1>New Student Entry</h1>
-        //     <form onSubmit={handleSubmit}>
-        //         <div>
-        //             <label>Name</label>
-        //             <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <label>Registration No.</label>
-        //             <input type="text" value={regNo} onChange={(e) => setRegNo(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <label>Phone No.</label>
-        //             <input type="text" value={pNo} onChange={(e) => setPno(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <label>Room No.</label>
-        //             <input type="text" value={roomNo} onChange={(e) => setRoomNo(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <label>Parent No.</label>
-        //             <input type="text" value={parentNo} onChange={(e) => setParentNo(e.target.value)} />
-        //         </div>
-        //         <div>
-        //             <label>Address</label>
-        //             <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
-        //         </div>
-        //         <button type="submit">Login</button>
-        //     </form>
-        // </div>
         <div className="wrapper2">
             <form onSubmit={handleSubmit}>
                 <h1>New Student's Enrollment...</h1>

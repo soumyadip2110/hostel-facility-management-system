@@ -27,7 +27,6 @@ function Attendance() {
         fetchData()
     }, [setAttendanceData]);
 
-    // function updateStatus(e){
     const updateStatus = (e, regNo) => {
         let updatedStatus;
         if (e.target.style.backgroundColor === 'green') {
@@ -94,7 +93,6 @@ function Attendance() {
             .then(response => response.json())
             .then(data => {
                 setAttendanceData(data);
-                // fetchData();
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);

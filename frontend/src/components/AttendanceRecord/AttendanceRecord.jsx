@@ -75,10 +75,6 @@ function AttendanceRecord() {
     return (
         <div className="attendance-container">
             <h2>Attendance Record</h2>
-            {/* <div className="mark-all-btn-container">
-                <button className="mark-all-btn allPresentBtn" onClick={markAll}>All Present<div></div></button>
-                <button className="mark-all-btn allOnLeaveBtn" onClick={markAll}>All On leave<div></div></button>
-            </div> */}
             <div className="search-container">
                 <input type="text" 
                     className="search-attendance" 
@@ -103,13 +99,9 @@ function AttendanceRecord() {
             {attendanceData.map((student) => {
                 return (
                     <AttenRecordRows
-                        // name={student.name}
                         regNo={student.regNo}
-                        // roomNo={student.roomNo}
-                        // pNo={student.pNo}
                         date={student.date}
                         status={student.status}
-                        // updateStatus={updateStatus}
                     />
                 )
             })}
